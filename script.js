@@ -62,3 +62,13 @@ window.addEventListener('click', (e) => {
         modal.setAttribute('aria-hidden', 'true');
     }
 });
+
+//Dark theme by time
+(function setThemeByTime() {
+    const hour = new Date().getHours();
+    if (hour >= 18 || hour < 6) {
+        document.body.classList.add('dark');
+    } else {
+        document.body.classList.remove('dark');
+    }
+})();
