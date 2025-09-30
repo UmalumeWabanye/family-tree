@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Family Tree</title>
+</head>
+<body>
+   <header>
+    <div class="logo">Nokhala</div>
+    <div>
+     <h1>Family Tree</h1>
+     <p>Click on anyone to view details. Nodes animate from the root and branch into place.</p>
+    </div>
+   </header>
+
+   <main class="wrap">
+    <section class="tree-shell">
+        <div class="tree-canvas" id="treeCanvas">
+            <svg class="connectors" id="svg"></svg>
+
+            <div class="person root" data-name="Jane Doe" data-born="1950" data-bio="The root ancestor." data-image="https://via.placeholder.com/100"></div>
+            <div class="person root" data-name="Dan Doe" data-born="1975" data-bio="The first descendant." data-image="https://via.placeholder.com/100"></div>
+            <div class="person root" data-name="James Doe" data-born="1978" data-bio="The second descendant." data-image="https://via.placeholder.com/100"></div>
+        </div>
+    </section>
+   </main>
+
+   <div id="tooltip" class="tlt" aria-hidden="true" ></div>
+
+   <div id="modal" class="modal" role="dialog" aria-hidden="true" >
+    <div class="modal-card" role="document">
+        <div class="portrait"><img src="" alt="" id="portrait"></div>
+        <div class="meta">
+            <h3 id="modalName">Name</h3>
+            <p id="modalBorn">Born: -</p>
+            <p id="modalBio">Bio: This is a short sample biography. Replace with real data per person.</p>
+        </div>
+        <div style="margin-left: auto;"><button class="close-btn" id="closeModal">x</button></div>
+    </div>
+   </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
